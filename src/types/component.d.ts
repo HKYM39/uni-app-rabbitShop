@@ -1,3 +1,4 @@
+import CommoSwiper from '@/components/CommoSwiper.vue'
 /**
  * declare module '@vue/runtime-core'
  *   现调整为
@@ -7,5 +8,6 @@ import 'vue'
 declare module 'vue' {
   export interface GlobalComponents {
     //
+    CommoSwiper: typeof CommoSwiper
   }
 }

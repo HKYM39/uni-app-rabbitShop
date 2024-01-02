@@ -19,5 +19,12 @@
     // experimentalRuntimeMode 已废弃，现调整为 nativeTags，请升级 Volar 插件至最新版本
     "nativeTags": ["block", "component", "template", "slot"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue", // unplugin-auto-import/vite自动引入的类型声明文件
+    "typings/**/*.d.ts",
+    "typings/**/*.ts"
+  ]
 }
