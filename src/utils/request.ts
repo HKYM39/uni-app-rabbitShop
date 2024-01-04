@@ -1,5 +1,5 @@
 import { useMemberStore } from '@/stores/modules/member'
-import type { CommoResponse } from '@/types/commo'
+import type { CommoResponse } from '@/types/request'
 import HttpStatusCode from './httpStatusCode'
 
 // 请求基本地址

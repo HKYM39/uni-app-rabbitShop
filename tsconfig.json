@@ -25,6 +25,6 @@
     "src/**/*.tsx",
     "src/**/*.vue", // unplugin-auto-import/vite自动引入的类型声明文件
     "typings/**/*.d.ts",
-    "typings/**/*.ts"
+    "typings/**/*.ts",
   ]
 }

@@ -5,7 +5,11 @@
         <text class="panel-title">{{ panel.title }}</text>
         <text class="panel-desc">{{ panel.alt }}</text>
       </view>
-      <navigator class="cards" :url="`/pages/hot/hot?type=${panel.type}`" hover-class="none">
+      <navigator
+        class="cards"
+        :url="`/pages/recommend/recommend?type=${panel.type}`"
+        hover-class="none"
+      >
         <image
           class="image"
           mode="aspectFit"
@@ -37,6 +41,7 @@ defineProps({
   margin: 20rpx 20rpx 0;
   border-radius: 10rpx;
   background-color: #fff;
+
   .title {
     display: flex;
     align-items: center;
@@ -44,6 +49,7 @@ defineProps({
     font-size: 32rpx;
     color: #262626;
     position: relative;
+
     .panel-desc {
       font-size: 24rpx;
       color: #7f7f7f;
@@ -58,20 +64,25 @@ defineProps({
     height: 254rpx;
     border-right: 1rpx solid #eee;
     border-top: 1rpx solid #eee;
+
     .title {
       justify-content: start;
     }
+
     &:nth-child(2n) {
       border-right: 0 none;
     }
+
     &:nth-child(-n + 2) {
       border-top: 0 none;
     }
+
     .image {
       width: 150rpx;
       height: 150rpx;
     }
   }
+
   .cards {
     flex: 1;
     padding: 15rpx 20rpx;

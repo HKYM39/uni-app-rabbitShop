@@ -1,3 +1,4 @@
+/** 首页轮播图数据类型 */
 export interface BannerItem {
   /** 跳转链接 */
   hrefUrl: string
