@@ -24,7 +24,7 @@ defineProps({
 })
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .category {
   margin: 20rpx 0 0;
   padding: 10rpx 0;
@@ -32,6 +32,7 @@ defineProps({
   display: flex;
   flex-wrap: wrap;
   min-height: 328rpx;
+
   .category-item {
     width: 150rpx;
     display: flex;
@@ -44,6 +45,7 @@ defineProps({
       width: 100rpx;
       height: 100rpx;
     }
+
     .text {
       font-size: 26rpx;
       color: #666;

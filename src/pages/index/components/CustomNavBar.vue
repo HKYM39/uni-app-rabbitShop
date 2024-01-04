@@ -19,7 +19,7 @@
 const { safeAreaInsets } = uni.getSystemInfoSync()
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 /* 自定义导航栏start */
 .navbar {
   /* 背景图 */
@@ -36,10 +36,12 @@ const { safeAreaInsets } = uni.getSystemInfoSync()
     height: 64rpx;
     padding-left: 30rpx;
     padding-top: 20rpx;
+
     .logo-image {
       width: 166rpx;
       height: 39rpx;
     }
+
     .logo-text {
       flex: 1;
       line-height: 28rpx;
@@ -50,6 +52,7 @@ const { safeAreaInsets } = uni.getSystemInfoSync()
       font-size: 26rpx;
     }
   }
+
   .search {
     display: flex;
     align-items: center;
@@ -62,11 +65,13 @@ const { safeAreaInsets } = uni.getSystemInfoSync()
     border-radius: 32rpx;
     background-color: rgba($color: #fff, $alpha: 0.5);
   }
+
   .icon-search {
     &::before {
       margin-right: 10rpx;
     }
   }
+
   .icon-scan {
     font-size: 30rpx;
     padding: 15rpx;

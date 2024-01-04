@@ -33,7 +33,7 @@ defineProps({
 })
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .sub {
   display: flex;
   flex-wrap: wrap;

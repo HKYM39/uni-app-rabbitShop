@@ -79,10 +79,11 @@ defineExpose({
 })
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 :host {
   display: block;
 }
+
 .guess-like {
   .caption {
     display: flex;
@@ -90,6 +91,7 @@ defineExpose({
     line-height: 1;
     padding: 36rpx 0 40rpx;
     font-size: 32rpx;
+
     .main-title {
       display: flex;
       justify-content: center;
@@ -106,11 +108,13 @@ defineExpose({
       }
     }
   }
+
   .guess-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 20rpx;
+
     .guess-item {
       width: 345rpx;
       padding: 24rpx 20rpx 20rpx;
@@ -119,10 +123,12 @@ defineExpose({
       overflow: hidden;
       background-color: white;
       font-size: 26rpx;
+
       .item-image {
         width: 304rpx;
         height: 304rpx;
       }
+
       .item-name {
         height: 75rpx;
         margin: 10rpx 0;
@@ -139,6 +145,7 @@ defineExpose({
         padding-top: 4rpx;
         color: $main-price-color;
       }
+
       .small {
         font-size: 80%;
       }

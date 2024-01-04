@@ -36,13 +36,14 @@ const onChange: UniHelper.SwiperOnChange = (e) => {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .carousel {
   height: 280rpx;
   position: relative;
   overflow: hidden;
   transform: translateY(0);
   background-color: #efefef;
+
   .indicator {
     position: absolute;
     left: 0;
@@ -58,10 +59,12 @@ const onChange: UniHelper.SwiperOnChange = (e) => {
       border-radius: 6rpx;
       background-color: rgba(255, 255, 255, 0.4);
     }
+
     .active {
       background-color: #fff;
     }
   }
+
   .navigator,
   .image {
     width: 100%;

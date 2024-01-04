@@ -8,7 +8,8 @@
         <view class="logo CustomNavBar--logo data-v-d6ebbcc0 CustomNavBar--data-v-d6ebbcc0">
           <image
             class="logo-image CustomNavBar--logo-image data-v-d6ebbcc0 CustomNavBar--data-v-d6ebbcc0 sk-image"
-          ></image>
+          >
+          </image>
           <text
             class="logo-text CustomNavBar--logo-text data-v-d6ebbcc0 CustomNavBar--data-v-d6ebbcc0 sk-transparent sk-text-3-5714-309 sk-text"
             >新鲜 · 亲民 · 快捷</text
@@ -216,11 +217,13 @@
               <image
                 class="image SubPannel--image data-v-acad5b66 SubPannel--data-v-acad5b66 sk-image"
                 mode="aspectFit"
-              ></image>
+              >
+              </image>
               <image
                 class="image SubPannel--image data-v-acad5b66 SubPannel--data-v-acad5b66 sk-image"
                 mode="aspectFit"
-              ></image>
+              >
+              </image>
             </navigator>
           </view>
           <view class="panel-item SubPannel--panel-item data-v-acad5b66 SubPannel--data-v-acad5b66">
@@ -241,11 +244,13 @@
               <image
                 class="image SubPannel--image data-v-acad5b66 SubPannel--data-v-acad5b66 sk-image"
                 mode="aspectFit"
-              ></image>
+              >
+              </image>
               <image
                 class="image SubPannel--image data-v-acad5b66 SubPannel--data-v-acad5b66 sk-image"
                 mode="aspectFit"
-              ></image>
+              >
+              </image>
             </navigator>
           </view>
           <view class="panel-item SubPannel--panel-item data-v-acad5b66 SubPannel--data-v-acad5b66">
@@ -266,11 +271,13 @@
               <image
                 class="image SubPannel--image data-v-acad5b66 SubPannel--data-v-acad5b66 sk-image"
                 mode="aspectFit"
-              ></image>
+              >
+              </image>
               <image
                 class="image SubPannel--image data-v-acad5b66 SubPannel--data-v-acad5b66 sk-image"
                 mode="aspectFit"
-              ></image>
+              >
+              </image>
             </navigator>
           </view>
           <view class="panel-item SubPannel--panel-item data-v-acad5b66 SubPannel--data-v-acad5b66">
@@ -291,11 +298,13 @@
               <image
                 class="image SubPannel--image data-v-acad5b66 SubPannel--data-v-acad5b66 sk-image"
                 mode="aspectFit"
-              ></image>
+              >
+              </image>
               <image
                 class="image SubPannel--image data-v-acad5b66 SubPannel--data-v-acad5b66 sk-image"
                 mode="aspectFit"
-              ></image>
+              >
+              </image>
             </navigator>
           </view>
         </view>
@@ -305,10 +314,11 @@
 </template>
 <script lang="ts" setup></script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .sk-transparent {
   color: transparent !important;
 }
+
 .sk-text-3-5714-309 {
   background-image: linear-gradient(
     transparent 3.5714%,
@@ -319,6 +329,7 @@
   background-size: 100% 28rpx;
   position: relative !important;
 }
+
 .sk-text {
   background-origin: content-box !important;
   background-clip: content-box !important;
@@ -326,6 +337,7 @@
   color: transparent !important;
   background-repeat: repeat-y !important;
 }
+
 .sk-text-14-2857-817 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -336,6 +348,7 @@
   background-size: 100% 39.2rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-98 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -346,6 +359,7 @@
   background-size: 100% 36.4rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-831 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -356,6 +370,7 @@
   background-size: 100% 36.4rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-292 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -366,6 +381,7 @@
   background-size: 100% 36.4rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-627 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -376,6 +392,7 @@
   background-size: 100% 36.4rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-953 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -386,6 +403,7 @@
   background-size: 100% 36.4rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-376 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -396,6 +414,7 @@
   background-size: 100% 36.4rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-699 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -406,6 +425,7 @@
   background-size: 100% 36.4rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-799 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -416,6 +436,7 @@
   background-size: 100% 36.4rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-6 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -426,6 +447,7 @@
   background-size: 100% 36.4rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-63 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -436,6 +458,7 @@
   background-size: 100% 36.4rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-423 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -446,6 +469,7 @@
   background-size: 100% 44.8rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-11 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -456,6 +480,7 @@
   background-size: 100% 33.6rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-68 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -466,6 +491,7 @@
   background-size: 100% 44.8rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-193 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -476,6 +502,7 @@
   background-size: 100% 33.6rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-143 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -486,6 +513,7 @@
   background-size: 100% 44.8rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-262 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -496,6 +524,7 @@
   background-size: 100% 33.6rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-919 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -506,6 +535,7 @@
   background-size: 100% 44.8rpx;
   position: relative !important;
 }
+
 .sk-text-14-2857-498 {
   background-image: linear-gradient(
     transparent 14.2857%,
@@ -516,9 +546,11 @@
   background-size: 100% 33.6rpx;
   position: relative !important;
 }
+
 .sk-image {
   background: #efefef !important;
 }
+
 .sk-pseudo::before,
 .sk-pseudo::after {
   background: #efefef !important;
@@ -526,14 +558,17 @@
   color: transparent !important;
   border-color: transparent !important;
 }
+
 .sk-pseudo-rect::before,
 .sk-pseudo-rect::after {
   border-radius: 0 !important;
 }
+
 .sk-pseudo-circle::before,
 .sk-pseudo-circle::after {
   border-radius: 50% !important;
 }
+
 .sk-container {
   position: absolute;
   left: 0;
