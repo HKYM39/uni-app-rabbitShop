@@ -1,20 +1,22 @@
 <template>
-  <CustomNavBar></CustomNavBar>
-
-  <scroll-view
-    class="scroll-view"
-    refresher-enabled
-    @refresherrefresh="onScroll"
-    :refresher-triggered="scrollTrigger"
-    @scrolltolower="onScrolltolower"
-    scroll-y
-  >
-    <CommoSwiper :banner-list="bannerList"></CommoSwiper>
-    <CategoryPanel :category-list="categoryList"></CategoryPanel>
-    <SubPannel :panel-list="panelList"></SubPannel>
-    <CommoGuess ref="guessRef"></CommoGuess>
-    <view class="loading-text">加载中......</view>
-  </scroll-view>
+  <view class="viewport" v-if="finishingLoad">
+    <CustomNavBar></CustomNavBar>
+    <scroll-view
+      class="scroll-view"
+      refresher-enabled
+      @refresherrefresh="onScroll"
+      :refresher-triggered="scrollTrigger"
+      @scrolltolower="onScrolltolower"
+      scroll-y
+    >
+      <CommoSwiper :banner-list="bannerList"></CommoSwiper>
+      <CategoryPanel :category-list="categoryList"></CategoryPanel>
+      <SubPannel :panel-list="panelList"></SubPannel>
+      <CommoGuess ref="guessRef"></CommoGuess>
+      <view class="loading-text">加载中......</view>
+    </scroll-view>
+  </view>
+  <skeleton v-else></skeleton>
 </template>
 
 <script setup lang="ts">
@@ -26,6 +28,7 @@ import CommoSwiper from '@/components/CommoSwiper.vue'
 import CategoryPanel from './components/CategoryPanel.vue'
 import SubPannel from './components/SubPannel.vue'
 import CommoGuess from '@/components/CommoGuess.vue'
+import skeleton from './components/skeleton.vue'
 
 import { getHomeBannersAPI, getHomeCategorysAPI, getSubPanelAPI } from '@/services/home'
 import type { PanelItem, BannerItem, CategoryItem } from '@/types/home'
@@ -80,10 +83,13 @@ const onScrolltolower = async () => {
   guessRef.value.getMore()
 }
 
+// 页面数据是否已经加载完成
+const finishingLoad = ref(false)
 // 发送请求，获取页面所需数据
 // 通过uniApp的Onload,加载完成生命周期，调用Promise.all将定义的所有获取数据方法调用
 onLoad(async () => {
   await Promise.all([getBanners(), getCategoryList(), getSubPanelList()])
+  finishingLoad.value = true
 })
 </script>
 
