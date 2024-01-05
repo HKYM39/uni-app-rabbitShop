@@ -26,16 +26,17 @@
                 </view>
             </view>
 
+            <!-- 服务层 -->
             <view class="action">
                 <view class="item arrow">
                     <text class="label">选择</text>
                     <text class="text ellipsis"> 请选择商品规格 </text>
                 </view>
-                <view class="item arrow">
+                <view class="item arrow" @tap="openPop('address')">
                     <text class="label">送至</text>
                     <text class="text ellipsis"> 请选择收货地址 </text>
                 </view>
-                <view class="item arrow">
+                <view class="item arrow" @tap="openPop('service')">
                     <text class="label">服务</text>
                     <text class="text ellipsis"> 无忧退 快速退款 免费包邮 </text>
                 </view>
@@ -109,13 +110,20 @@
             <view class="buynow"> 立即购买 </view>
         </view>
     </view>
+
+    <uni-popup ref="popup" type="bottom" background-color="#fff">
+        <service-panel v-if="popName === 'service'" @close="popup?.close()"></service-panel>
+        <address-panel v-else-if="popName === 'address'" @close="popup?.close()"></address-panel>
+    </uni-popup>
 </template>
 
 <script setup lang="ts">
 import { getGoodsDetailByIdApi } from '@/services/goods'
 import type { GoodsRsponse } from '@/types/goods.d.ts'
-import skeleton from './components/skeleton.vue'
 
+import skeleton from './components/skeleton.vue'
+import ServicePanel from './components/ServicePanel.vue'
+import AddressPanel from './components/AddressPanel.vue'
 // 获取安全下标
 const { safeAreaInsets } = uni.getSystemInfoSync()
 
@@ -151,6 +159,21 @@ const fullImage = (url: string) => {
     })
 }
 
+// 弹出框ref
+const popup = ref<{
+    open: (type?: UniHelper.UniPopupType) => void
+    close: () => void
+}>()
+
+// 弹出框类型
+const popName = ref<'address' | 'service'>()
+
+// 展示弹出框
+const openPop = (name: typeof popName.value) => {
+    popName.value = name
+    popup.value?.open()
+}
+
 // 页面是否完成加载
 const finishLoading = ref(false)
 
@@ -158,6 +181,8 @@ const finishLoading = ref(false)
 onLoad(() => {
     finishLoading.value = false
     getGoodsData()
+    console.log('🚀 ~ file: goods.vue:164 ~ popup:', popup)
+    console.log('🚀 ~ file: goods.vue:171 ~ popName:', popName.value)
     finishLoading.value = true
 })
 </script>
