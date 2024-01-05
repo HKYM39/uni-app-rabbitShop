@@ -112,11 +112,6 @@ onLoad(async () => {
 const activeCategoryChildren = computed(() => {
   return categoryList.value[activeCategory.value]?.children || []
 })
-
-console.log(
-  '🚀 ~ file: category.vue:104 ~ activeCategoryChildren ~ activeCategoryChildren:',
-  activeCategoryChildren.value,
-)
 </script>
 
 <style lang="scss">
