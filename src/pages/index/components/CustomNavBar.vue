@@ -1,18 +1,18 @@
 <template>
-  <view class="navbar" :style="{ paddingTop: safeAreaInsets?.top + 'px' }">
-    <!-- logo -->
-    <view class="logo">
-      <!-- logo图片 -->
-      <image src="@/static/images/logo.png" class="logo-image" />
-      <!-- logo文字 -->
-      <text class="logo-text">新鲜 · 亲民 · 快捷</text>
+    <view class="navbar" :style="{ paddingTop: safeAreaInsets?.top + 'px' }">
+        <!-- logo -->
+        <view class="logo">
+            <!-- logo图片 -->
+            <image src="@/static/images/logo@2x.png" class="logo-image" />
+            <!-- logo文字 -->
+            <text class="logo-text">新鲜 · 亲民 · 快捷</text>
+        </view>
+        <!-- 搜索框 -->
+        <view class="search">
+            <text class="icon-search">搜索商品</text>
+            <text class="icon-scan"></text>
+        </view>
     </view>
-    <!-- 搜索框 -->
-    <view class="search">
-      <text class="icon-search">搜索商品</text>
-      <text class="icon-scan"></text>
-    </view>
-  </view>
 </template>
 
 <script setup lang="ts">
@@ -22,59 +22,59 @@ const { safeAreaInsets } = uni.getSystemInfoSync()
 <style lang="scss">
 /* 自定义导航栏start */
 .navbar {
-  /* 背景图 */
-  background-image: url('@/static/images/navigator_bg.png');
-  background-size: cover;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-
-  .logo {
+    /* 背景图 */
+    background-image: linear-gradient(135deg, #fccf31 10%, #f55555 100%);
+    background-size: cover;
+    position: relative;
     display: flex;
-    align-items: center;
-    height: 64rpx;
-    padding-left: 30rpx;
-    padding-top: 20rpx;
+    flex-direction: column;
+    padding-top: 20px;
 
-    .logo-image {
-      width: 166rpx;
-      height: 39rpx;
+    .logo {
+        display: flex;
+        align-items: center;
+        height: 64rpx;
+        padding-left: 30rpx;
+        padding-top: 20rpx;
+
+        .logo-image {
+            width: 166rpx;
+            height: 39rpx;
+        }
+
+        .logo-text {
+            flex: 1;
+            line-height: 28rpx;
+            color: $uni-bg-color;
+            margin: 2rpx 0 0 20rpx;
+            padding-left: 20rpx;
+            border-left: 1rpx solid #fff;
+            font-size: 26rpx;
+        }
     }
 
-    .logo-text {
-      flex: 1;
-      line-height: 28rpx;
-      color: $uni-bg-color;
-      margin: 2rpx 0 0 20rpx;
-      padding-left: 20rpx;
-      border-left: 1rpx solid #fff;
-      font-size: 26rpx;
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10rpx 0 26rpx;
+        height: 64rpx;
+        margin: 16rpx 20rpx;
+        color: $uni-bg-color;
+        font-size: 28rpx;
+        border-radius: 32rpx;
+        background-color: rgba($color: #fff, $alpha: 0.5);
     }
-  }
 
-  .search {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10rpx 0 26rpx;
-    height: 64rpx;
-    margin: 16rpx 20rpx;
-    color: $uni-bg-color;
-    font-size: 28rpx;
-    border-radius: 32rpx;
-    background-color: rgba($color: #fff, $alpha: 0.5);
-  }
-
-  .icon-search {
-    &::before {
-      margin-right: 10rpx;
+    .icon-search {
+        &::before {
+            margin-right: 10rpx;
+        }
     }
-  }
 
-  .icon-scan {
-    font-size: 30rpx;
-    padding: 15rpx;
-  }
+    .icon-scan {
+        font-size: 30rpx;
+        padding: 15rpx;
+    }
 }
 </style>

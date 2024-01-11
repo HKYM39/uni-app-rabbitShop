@@ -102,7 +102,7 @@ defineExpose({
                 content: '';
                 width: 20rpx;
                 height: 20rpx;
-                background-image: url(@/static/images/bubble.png);
+                background-image: url(@/static/images/Loading.png);
                 background-size: contain;
                 margin: 0 10rpx;
             }
