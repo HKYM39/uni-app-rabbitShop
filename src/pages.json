@@ -20,6 +20,8 @@
         {
             "path": "pages/my/my",
             "style": {
+                "navigationStyle": "custom",
+                "navigationBarTextStyle": "white",
                 "navigationBarTitleText": "我的"
             }
         },
@@ -92,5 +94,24 @@
                 "selectedIconPath": "static/tabs/user_selected.png"
             }
         ]
+    },
+    "subPackages": [
+        {
+            "root": "pagesMember/settings",
+            "pages": [
+                {
+                    "path": "settings",
+                    "style": {
+                        "navigationBarTitleText": "设置"
+                    }
+                }
+            ]
+        }
+    ],
+    "preloadRule": {
+        "pages/my/my": {
+            "network": "all",
+            "packages": ["pagesMember/settings"]
+        }
     }
 }

@@ -64,7 +64,7 @@ const loginType = ref<'wechat' | 'phone'>('wechat')
 
 // 密码方式登录表单
 const easyLoginForm = ref<EasyPhonetLoginForm>({
-    phoneNumber: '',
+    phoneNumber: '13588888888',
 })
 
 // 登录方式修改
