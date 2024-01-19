@@ -2,9 +2,9 @@ import { request } from '@/utils/request'
 import { type CategoryItem, type BannerItem, type PanelItem } from '@/types/home'
 
 const enum HomePageUrls {
-  GET_BANNER_ITEM = '/home/banner',
-  GET_CATEGORY_LIST = '/home/category/mutli',
-  GET_SUBPANEL_LIST = '/home/hot/mutli',
+    GET_BANNER_ITEM = '/home/banner',
+    GET_CATEGORY_LIST = '/home/category/mutli',
+    GET_SUBPANEL_LIST = '/home/hot/mutli',
 }
 
 /**
@@ -12,31 +12,31 @@ const enum HomePageUrls {
  * @param distributionSite 广告区域展示位置（投放位置 投放位置，1为首页，2为分类商品页） 默认是1
  */
 export const getHomeBannersAPI = (distributionSite = 1) => {
-  return request<BannerItem[]>({
-    method: 'GET',
-    url: HomePageUrls.GET_BANNER_ITEM,
-    data: {
-      distributionSite,
-    },
-  })
+    return request<BannerItem[]>({
+        method: 'GET',
+        url: HomePageUrls.GET_BANNER_ITEM,
+        data: {
+            distributionSite,
+        },
+    })
 }
 
 /**
  * 首页－获取分类列表
  */
 export const getHomeCategorysAPI = () => {
-  return request<CategoryItem[]>({
-    method: 'GET',
-    url: HomePageUrls.GET_CATEGORY_LIST,
-  })
+    return request<CategoryItem[]>({
+        method: 'GET',
+        url: HomePageUrls.GET_CATEGORY_LIST,
+    })
 }
 
 /**
  * 首页－获取子栏目列表
  */
 export const getSubPanelAPI = () => {
-  return request<PanelItem[]>({
-    method: 'GET',
-    url: HomePageUrls.GET_SUBPANEL_LIST,
-  })
+    return request<PanelItem[]>({
+        method: 'GET',
+        url: HomePageUrls.GET_SUBPANEL_LIST,
+    })
 }

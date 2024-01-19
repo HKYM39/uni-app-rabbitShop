@@ -106,12 +106,25 @@
                     }
                 }
             ]
+        },
+        {
+            "root": "pagesMember/profile",
+            "pages": [
+                {
+                    "path": "profile",
+                    "style": {
+                        "navigationStyle": "custom",
+                        "navigationBarTextStyle": "white",
+                        "navigationBarTitleText": "会员信息"
+                    }
+                }
+            ]
         }
     ],
     "preloadRule": {
         "pages/my/my": {
             "network": "all",
-            "packages": ["pagesMember/settings"]
+            "packages": ["pagesMember/settings", "pagesMember/profile"]
         }
     }
 }
